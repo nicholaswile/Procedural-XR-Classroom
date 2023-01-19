@@ -9,7 +9,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
 
 
@@ -60,6 +59,7 @@ public class AvatarLoader : MonoBehaviour
         int rowNumber = 0;
         int avPerRow = 5;
         int rowStep = i/avPerRow;
+        //int rowStep = 3;
         int colNumber = 0;
         int colStep = 3;
 
