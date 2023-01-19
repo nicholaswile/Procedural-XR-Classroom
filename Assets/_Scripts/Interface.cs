@@ -6,6 +6,7 @@
 /// This class provides a UI to scale the class. 
 /// </summary> 
 
+using System.Diagnostics;
 using UnityEngine;
 
 public class Interface : MonoBehaviour
@@ -13,7 +14,7 @@ public class Interface : MonoBehaviour
     public float sliderValue = 1f;
     public float minValue = 1.0f, maxValue = 5.0f;
 
-    private enum AvatarValues { Size1 = 5, Size2 = 25, Size3 = 50};
+    private enum AvatarValues { Size1 = 10, Size2 = 30, Size3 = 50};
     private int avatarCount = (int)AvatarValues.Size1;
 
     [SerializeField] private AvatarLoader avatarLoader;
@@ -48,13 +49,16 @@ public class Interface : MonoBehaviour
             avatarCount = (int)AvatarValues.Size3;
         }
 
-        //sliderValue = GUI.HorizontalSlider(new Rect(25, 130, 100, 30), sliderValue, minValue, maxValue);
+        sliderValue = GUI.HorizontalSlider(new Rect(25, 130, 100, 30), sliderValue, minValue, maxValue);
+        
+        avatarCount = (int)(10 * sliderValue);
 
         avatarLoader.ActivateAvatars(avatarCount);
 
         GUI.Box(new Rect(10, 185, 125, 60), "Avatar Data");
 
         GUI.Label(new Rect(25, 215, 100, 50), "Total Avatars: " + avatarCount);
+
 
     }
 }
