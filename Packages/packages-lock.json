@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.soupday.cc3_unity_tools": {
+      "version": "file:C:/Users/nwile/Downloads/cc_unity_tools_3D-1.4.3/cc_unity_tools_3D-1.4.3",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.17.7",
       "depth": 0,
@@ -46,6 +52,15 @@
       "depth": 2,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.postprocessing": {
+      "version": "3.2.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
