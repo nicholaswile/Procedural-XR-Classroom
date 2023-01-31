@@ -58,8 +58,8 @@ public class AvatarLoader : MonoBehaviour
         // Used for calculating position
         int rowNumber = 0;
         int avPerRow = 5;
-        int rowStep = i/avPerRow;
-        //int rowStep = 3;
+        //int rowStep = i/avPerRow;
+        int rowStep = 3;
         int colNumber = 0;
         int colStep = 3;
 
