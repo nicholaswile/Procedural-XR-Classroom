@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &505886885
 Transform:
   m_ObjectHideFlags: 0
@@ -203,10 +203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numAvatars: 50
   avatars:
-  - {fileID: 2444833105053176773, guid: cd10b202b8b8c0044b3ad8be0894d4fd, type: 3}
-  - {fileID: 8441018509231030801, guid: 15bc036d5b0b0f742b1263d933a9bb44, type: 3}
-  - {fileID: 401137413009891186, guid: 6ce5f1ae15783f649a9926911346f189, type: 3}
-  - {fileID: 4127316472126620245, guid: 98925ecdc3f845a43a1be941cbfdc3cd, type: 3}
+  - {fileID: 2108483795015098727, guid: b8e5cfcf40eb85e42902ad2126a43959, type: 3}
+  - {fileID: 1520846355903995018, guid: f8ac2ce5e1e382940b61ba21d637d2d6, type: 3}
   avatarInstances: []
 --- !u!1 &705507993
 GameObject:
