@@ -203,8 +203,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numAvatars: 50
   avatars:
-  - {fileID: 2108483795015098727, guid: b8e5cfcf40eb85e42902ad2126a43959, type: 3}
-  - {fileID: 1520846355903995018, guid: f8ac2ce5e1e382940b61ba21d637d2d6, type: 3}
+  - {fileID: 1927191987587339351, guid: 09e12542285032f459b94a3afa3bcba4, type: 3}
+  - {fileID: 1470424965651374850, guid: 6e9058730a053b64f8dd82bff384e005, type: 3}
+  - {fileID: 1108561972759883569, guid: 21100fa0acee1434bb1080d348236bf7, type: 3}
+  - {fileID: 4153060110138862536, guid: cdae2ffaa71b34b42a80624665f7b77d, type: 3}
+  - {fileID: 4717234344185531350, guid: 2f3e50884137b1a44b693188c5ae3237, type: 3}
+  - {fileID: 6369110545766866338, guid: 923a0cb646ee2ae4fab2cc175df91426, type: 3}
+  - {fileID: 3361776722961190561, guid: 1921783c823a2b34ca1eeac95afc03dc, type: 3}
   avatarInstances: []
 --- !u!1 &705507993
 GameObject:
