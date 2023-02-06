@@ -536,7 +536,7 @@
                                         ]
                                     },
                                     "AO": {
-                                        "Texture Path": "./textures/avatarF01/avatarF01/CC_Base_Tongue/Ga_Skin_Body/Ga_Skin_Body_ao.png",
+                                        "Texture Path": "./textures/avatarF01/avatarF01/CC_Base_Body/Ga_Skin_Body/Ga_Skin_Body_ao.png",
                                         "Strength": 100.0,
                                         "Offset": [
                                             0.0,
@@ -642,7 +642,7 @@
                                         ]
                                     },
                                     "AO": {
-                                        "Texture Path": "./textures/avatarF01/avatarF01/CC_Base_Tongue/Ga_Skin_Body/Ga_Skin_Body_ao.png",
+                                        "Texture Path": "./textures/avatarF01/avatarF01/CC_Base_Body/Ga_Skin_Body/Ga_Skin_Body_ao.png",
                                         "Strength": 100.0,
                                         "Offset": [
                                             0.0,
