@@ -36,16 +36,27 @@ public class AvatarLoader : MonoBehaviour
         System.Random rnd = new System.Random();
         totalAvatars = avatars.Count;
         GameObject temp;
-        int target;
+        int target, previous=-1;
 
         for (int i = 0; i < numAvatars; i++)
         {
-            target = rnd.Next(0, totalAvatars);
+            // Do this so that the same avatar doesn't load next to itself
+            do
+            {
+                target = rnd.Next(0, totalAvatars);
+
+            } while (target == previous);
+            previous = target;
+
             temp = Instantiate(avatars[target]);
 
             // Assign a random color to each placeholder object
-            temp.GetComponent<Renderer>().material.color = new Vector4(rnd.Next(0, 2), rnd.Next(0, 2), rnd.Next(0, 2), 1);
-     
+            //temp.GetComponent<Renderer>().material.color = new Vector4(rnd.Next(0, 2), rnd.Next(0, 2), rnd.Next(0, 2), 1);
+            
+            //faces avatar in correct direction
+            // (because for some reason cc/ic exports them facing backwards)
+            temp.transform.Rotate(0, 180, 0);
+
             temp.SetActive(false);
             avatarInstances.Add(temp);
         }
@@ -59,7 +70,7 @@ public class AvatarLoader : MonoBehaviour
         int rowNumber = 0;
         int avPerRow = i / 3;
         //int rowStep = i/avPerRow;
-        int rowStep = 3;
+        int rowStep = 1;
         int colNumber = 0;
         int colStep = 3;
 
