@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Std_Cornea_L
+  m_Shader: {fileID: 4800000, guid: 526959adc9afad74386484581606475c, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _DETAIL_MULX2
+  - _GLOSSYREFLECTIONS_OFF
+  - _METALLICGLOSSMAP
+  - _METALLICSPECGLOSSMAP
+  - _NORMALMAP
+  - _OCCLUSIONMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 2800000, guid: 80f764b2cdb40334da649ee090450051, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 2800000, guid: 97b8156856a09d24f96feac28c661871, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 3235c6eb32f99ad49bbdf14e25dafacd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: a67988392aa3fc04f8a8b45f50dfaeb7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: eb9510400efb2184e978a289a9827a49, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _DetailNormalMapScale: 0.100000024
+    - _OcclusionStrength: 1
+    - _PupilScale: 1
+    m_Colors:
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
