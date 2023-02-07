@@ -70,7 +70,7 @@ public class AvatarLoader : MonoBehaviour
         int rowNumber = 0;
         int avPerRow = i / 3;
         //int rowStep = i/avPerRow;
-        int rowStep = 1;
+        int rowStep = 2;
         int colNumber = 0;
         int colStep = 3;
 
