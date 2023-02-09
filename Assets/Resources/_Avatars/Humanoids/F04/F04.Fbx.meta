@@ -902,7 +902,7 @@ ModelImporter:
     - name: ring_03_r
       parentName: 
       position: {x: -0.00000013113022, y: 0.02450943, z: 0.00000012874602}
-      rotation: {x: -0.0005243028, y: -0.00072007044, z: -0.024320336, w: 0.9997038}
+      rotation: {x: -0.0005243029, y: -0.00072007044, z: -0.024320338, w: 0.9997038}
       scale: {x: 0.99999994, y: 1, z: 0.99999994}
     - name: thumb_01_r
       parentName: 
@@ -917,7 +917,7 @@ ModelImporter:
     - name: thumb_03_r
       parentName: 
       position: {x: 0.00000017166137, y: 0.023340225, z: 0.00000015258789}
-      rotation: {x: -0.041336033, y: 0.0021802075, z: 0.034371186, w: 0.99855155}
+      rotation: {x: -0.041336037, y: 0.0021802075, z: 0.03437119, w: 0.99855155}
       scale: {x: 0.9999999, y: 1.0000001, z: 1}
     - name: lowerarm_twist_01_r
       parentName: 
@@ -1022,7 +1022,7 @@ ModelImporter:
     - name: thigh_r
       parentName: 
       position: {x: 0.09156096, y: -0.017806133, z: -0.004620838}
-      rotation: {x: 0.0000830002, y: 0.010536096, z: 0.99990696, w: 0.008663428}
+      rotation: {x: 0.0000830002, y: 0.010536097, z: 0.99990696, w: 0.008663429}
       scale: {x: 1, y: 1.0000002, z: 1.0000002}
     - name: calf_r
       parentName: 
