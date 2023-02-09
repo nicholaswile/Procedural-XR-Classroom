@@ -18,6 +18,7 @@ public class AvatarLoader : MonoBehaviour
 
     [SerializeField] private List<GameObject> avatars;
     [SerializeField] private List<GameObject> avatarInstances;
+    [SerializeField] private float height = .83f;
 
     // We will use this to place avatars in their desks eventually... 
     private List<Transform> positions;
@@ -68,15 +69,16 @@ public class AvatarLoader : MonoBehaviour
 
         // Used for calculating position
         int rowNumber = 0;
-        int avPerRow = i / 3;
+        //int avPerRow = i / 3;
+        int avPerRow = 5;
         //int rowStep = i/avPerRow;
-        int rowStep = 2;
+        int rowStep = 1;
         int colNumber = 0;
         int colStep = 3;
 
         foreach (GameObject avatar in avatarInstances)
         {
-            avatar.transform.position = new Vector3(colNumber, 2, rowNumber);
+            avatar.transform.position = new Vector3(colNumber, height, rowNumber);
 
             if (j < i)
             {
