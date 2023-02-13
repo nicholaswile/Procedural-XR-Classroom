@@ -243,6 +243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8537154480450510479, guid: 6409236db133d8b40ae1b7cfd4efa734, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8537154480450510576, guid: 6409236db133d8b40ae1b7cfd4efa734, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -317,6 +321,7 @@ GameObject:
   - component: {fileID: 282230531}
   - component: {fileID: 282230530}
   - component: {fileID: 282230529}
+  - component: {fileID: 282230533}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -350,6 +355,7 @@ MonoBehaviour:
   - {fileID: 285297855122216498, guid: e6b2e7d6eccbd5b4ca97097d38ebb7ec, type: 3}
   avatarInstances: []
   height: 0.83
+  deskLoader: {fileID: 0}
 --- !u!114 &282230530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +403,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282230533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282230528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a2d76ea0a316a4eaf72557e7e99e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desk: {fileID: 929991542}
+  avatarLoader: {fileID: 282230529}
+  deskInstances: []
 --- !u!1 &308958867
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +512,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &929991542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8537154480450510479, guid: 6409236db133d8b40ae1b7cfd4efa734, type: 3}
+  m_PrefabInstance: {fileID: 1683870051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1683870051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,6 +527,10 @@ PrefabInstance:
     - target: {fileID: 8537154480450510479, guid: 6409236db133d8b40ae1b7cfd4efa734, type: 3}
       propertyPath: m_Name
       value: Desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 8537154480450510479, guid: 6409236db133d8b40ae1b7cfd4efa734, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8537154480450510576, guid: 6409236db133d8b40ae1b7cfd4efa734, type: 3}
       propertyPath: m_RootOrder

@@ -19,6 +19,7 @@ public class AvatarLoader : MonoBehaviour
     [SerializeField] private List<GameObject> avatars;
     [SerializeField] private List<GameObject> avatarInstances;
     [SerializeField] private float height = .83f;
+    [SerializeField] private DeskLoader deskLoader;
 
     // We will use this to place avatars in their desks eventually... 
     private List<Transform> positions;
@@ -28,6 +29,11 @@ public class AvatarLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (deskLoader == null)
+        {
+            deskLoader = GetComponent<DeskLoader>();
+        }
+
         PoolAvatars();
     }
 
@@ -65,6 +71,9 @@ public class AvatarLoader : MonoBehaviour
 
     public void ActivateAvatars(int i)
     {
+
+        deskLoader.ActivateDesks(i);
+
         int j = 0;
 
         // Used for calculating position
@@ -82,11 +91,11 @@ public class AvatarLoader : MonoBehaviour
 
             if (j < i)
             {
-                avatarInstances[j].SetActive(true);
+                avatar.SetActive(true);
             }
             else
             {
-                avatarInstances[j].SetActive(false);
+                avatar.SetActive(false);
             }
             j++;
 
