@@ -1,6 +1,6 @@
 // Nicholas Wile
 // Dr. Sungchul Jung
-// Feb 14, 2023
+// Feb 13, 2023
 
 /// <summary>
 /// This class loads the desks into the scene; it depends on the num of avatars. 
