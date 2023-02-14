@@ -85,6 +85,9 @@ public class AvatarLoader : MonoBehaviour
         int colNumber = 0;
         int colStep = 3;
 
+        /*int maxRows = 5;
+        int nextCol = 7;*/
+
         foreach (GameObject avatar in avatarInstances)
         {
             avatar.transform.position = new Vector3(colNumber, height, rowNumber);
@@ -105,6 +108,11 @@ public class AvatarLoader : MonoBehaviour
             {
                 rowNumber += colStep;
                 colNumber = 0;
+               /* if (rowNumber >= maxRows)
+                {
+                    rowNumber = 0;
+                    colNumber += nextCol;
+                }*/
             }
 
         }

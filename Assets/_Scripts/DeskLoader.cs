@@ -37,7 +37,15 @@ public class DeskLoader : MonoBehaviour
 
     public void ActivateDesks(int activeAvatars)
     {
+        int deskNum = 0;
+        int deskZPos = -1 + 3 * deskNum;
         int j = 0;
+
+        int deskXPos = 2;
+        int deskXStep = 7;
+
+        int deskPerCol = 5;
+      
         GameObject desk;
         for (int i = 0; i < numAvatars; i++)
         {
@@ -45,8 +53,9 @@ public class DeskLoader : MonoBehaviour
             {
                 continue;
             }
-            desk = deskInstances[j];
-            desk.transform.position = new Vector3(2, 1, -1 + 3 * j);
+          
+            desk = deskInstances[deskNum];
+            desk.transform.position = new Vector3(deskXPos, 1, deskZPos);
             if (i >= activeAvatars)
             {
                 desk.SetActive(false);
@@ -55,7 +64,19 @@ public class DeskLoader : MonoBehaviour
             {
                 desk.SetActive(true);
             }
+            
+            deskNum++;
             j++;
+            
+            if (deskNum % deskPerCol == 0)
+            {
+                deskXPos += deskXStep;
+                j = 0;
+                
+            }
+
+            deskZPos = -1 + 3 * j;
+
         }
     }
 }
