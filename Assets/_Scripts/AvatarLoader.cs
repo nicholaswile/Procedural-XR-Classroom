@@ -88,9 +88,13 @@ public class AvatarLoader : MonoBehaviour
         /*int maxRows = 5;
         int nextCol = 7;*/
 
+        int deskStep = 7;
+        int avXPos = 0;
+        int numAvPerChunk = 25;
+
         foreach (GameObject avatar in avatarInstances)
         {
-            avatar.transform.position = new Vector3(colNumber, height, rowNumber);
+            avatar.transform.position = new Vector3(colNumber+avXPos, height, rowNumber);
 
             if (j < i)
             {
@@ -108,11 +112,11 @@ public class AvatarLoader : MonoBehaviour
             {
                 rowNumber += colStep;
                 colNumber = 0;
-               /* if (rowNumber >= maxRows)
-                {
-                    rowNumber = 0;
-                    colNumber += nextCol;
-                }*/
+            }
+            if (j%numAvPerChunk == 0)
+            {
+                avXPos += deskStep;
+                rowNumber = 0;
             }
 
         }
