@@ -867,7 +867,7 @@ ModelImporter:
     - name: upperarm_r
       parentName: 
       position: {x: 0.0006675253, y: 0.1025941, z: 0.00014474869}
-      rotation: {x: 0.12518962, y: 0.00030253225, z: -0.0025313017, w: 0.99212956}
+      rotation: {x: 0.12518963, y: 0.00030253225, z: -0.002531302, w: 0.99212956}
       scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
     - name: lowerarm_r
       parentName: 

@@ -12,7 +12,7 @@ public class ResizeFloor : MonoBehaviour
 {
     [SerializeField] private Transform floor;
 
-    [Range(1f, 5f)]
+    //[Range(1f, 5f)]
     public float scale = 1;
 
     private float xValue, zValue;

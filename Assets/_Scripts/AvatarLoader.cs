@@ -18,6 +18,8 @@ public class AvatarLoader : MonoBehaviour
 
     [SerializeField] private List<GameObject> avatars;
     [SerializeField] private List<GameObject> avatarInstances;
+    [SerializeField] private float height = .83f;
+    [SerializeField] private DeskLoader deskLoader;
 
     // We will use this to place avatars in their desks eventually... 
     private List<Transform> positions;
@@ -27,6 +29,11 @@ public class AvatarLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (deskLoader == null)
+        {
+            deskLoader = GetComponent<DeskLoader>();
+        }
+
         PoolAvatars();
     }
 
@@ -64,27 +71,38 @@ public class AvatarLoader : MonoBehaviour
 
     public void ActivateAvatars(int i)
     {
+
+        deskLoader.ActivateDesks(i);
+
         int j = 0;
 
         // Used for calculating position
         int rowNumber = 0;
-        int avPerRow = i / 3;
+        //int avPerRow = i / 3;
+        int avPerRow = 5;
         //int rowStep = i/avPerRow;
-        int rowStep = 2;
+        int rowStep = 1;
         int colNumber = 0;
         int colStep = 3;
 
+        /*int maxRows = 5;
+        int nextCol = 7;*/
+
+        int deskStep = 7;
+        int avXPos = 0;
+        int numAvPerChunk = 25;
+
         foreach (GameObject avatar in avatarInstances)
         {
-            avatar.transform.position = new Vector3(colNumber, 2, rowNumber);
+            avatar.transform.position = new Vector3(colNumber+avXPos, height, rowNumber);
 
             if (j < i)
             {
-                avatarInstances[j].SetActive(true);
+                avatar.SetActive(true);
             }
             else
             {
-                avatarInstances[j].SetActive(false);
+                avatar.SetActive(false);
             }
             j++;
 
@@ -94,6 +112,11 @@ public class AvatarLoader : MonoBehaviour
             {
                 rowNumber += colStep;
                 colNumber = 0;
+            }
+            if (j%numAvPerChunk == 0)
+            {
+                avXPos += deskStep;
+                rowNumber = 0;
             }
 
         }

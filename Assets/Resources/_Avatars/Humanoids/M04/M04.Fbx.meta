@@ -837,7 +837,7 @@ ModelImporter:
     - name: clavicle_r
       parentName: 
       position: {x: 0.058510322, y: 0.23117265, z: 0.0069356104}
-      rotation: {x: -0.05278426, y: 0.15164627, z: -0.675543, w: 0.7196242}
+      rotation: {x: -0.052784253, y: 0.15164626, z: -0.67554295, w: 0.71962416}
       scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
     - name: upperarm_r
       parentName: 
@@ -892,7 +892,7 @@ ModelImporter:
     - name: pinky_02_r
       parentName: 
       position: {x: 0.000000028610229, y: 0.035275344, z: -0.0000001335144}
-      rotation: {x: 0.031712625, y: 0.00021461955, z: -0.000099307756, w: 0.999497}
+      rotation: {x: 0.03171263, y: 0.00021461955, z: -0.00009930776, w: 0.999497}
       scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
     - name: pinky_03_r
       parentName: 
@@ -1007,7 +1007,7 @@ ModelImporter:
     - name: calf_l
       parentName: 
       position: {x: 0.00000014305114, y: 0.44785666, z: 0.000004520416}
-      rotation: {x: -0.03578894, y: -0.00009467391, z: 0.0034649505, w: 0.99935335}
+      rotation: {x: -0.035788942, y: -0.00009467391, z: 0.0034649507, w: 0.99935335}
       scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
     - name: calf_twist_01_l
       parentName: 

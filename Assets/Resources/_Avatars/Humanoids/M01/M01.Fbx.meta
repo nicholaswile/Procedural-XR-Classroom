@@ -977,7 +977,7 @@ ModelImporter:
     - name: thigh_l
       parentName: 
       position: {x: -0.099278934, y: -0.020541053, z: -0.0018455529}
-      rotation: {x: -0.0001248853, y: 0.015719077, z: 0.9998402, w: -0.008513379}
+      rotation: {x: -0.0001248853, y: 0.015719078, z: 0.9998402, w: -0.00851338}
       scale: {x: 1, y: 1.0000004, z: 1.0000004}
     - name: calf_l
       parentName: 

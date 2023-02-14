@@ -767,7 +767,7 @@ ModelImporter:
     - name: pinky_01_l
       parentName: 
       position: {x: -0.0069434643, y: 0.08559006, z: -0.03643196}
-      rotation: {x: -0.108546436, y: -0.00020574724, z: 0.10033416, w: 0.989015}
+      rotation: {x: -0.10854644, y: -0.00020574724, z: 0.10033417, w: 0.989015}
       scale: {x: 1, y: 1, z: 0.9999999}
     - name: pinky_02_l
       parentName: 
@@ -857,7 +857,7 @@ ModelImporter:
     - name: middle_01_r
       parentName: 
       position: {x: -0, y: 0.09691841, z: -0.000000019073486}
-      rotation: {x: -0.08212262, y: -0.002937528, z: -0.08634926, w: 0.9928701}
+      rotation: {x: -0.082122624, y: -0.002937528, z: -0.086349264, w: 0.9928701}
       scale: {x: 0.9999997, y: 0.99999976, z: 0.9999997}
     - name: middle_02_r
       parentName: 
@@ -987,7 +987,7 @@ ModelImporter:
     - name: thigh_l
       parentName: 
       position: {x: -0.099278934, y: -0.02054104, z: -0.0018455529}
-      rotation: {x: -0.00012488542, y: 0.015719077, z: 0.9998402, w: -0.008513379}
+      rotation: {x: -0.00012488542, y: 0.015719078, z: 0.9998402, w: -0.00851338}
       scale: {x: 1, y: 1.0000004, z: 1.0000004}
     - name: calf_l
       parentName: 
