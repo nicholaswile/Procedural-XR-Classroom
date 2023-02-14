@@ -1,3 +1,11 @@
+// Nicholas Wile
+// Dr. Sungchul Jung
+// Feb 14, 2023
+
+/// <summary>
+/// This class loads the desks into the scene; it depends on the num of avatars. 
+/// </summary> 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
