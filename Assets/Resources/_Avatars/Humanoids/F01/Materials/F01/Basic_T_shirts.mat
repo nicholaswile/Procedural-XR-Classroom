@@ -17,7 +17,7 @@ Material:
   - _METALLICSPECGLOSSMAP
   - _OCCLUSIONMAP
   m_LightmapFlags: 3
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap:
@@ -86,6 +86,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.7102645, g: 0.4325873, b: 0.56062776, a: 1}
+    - _Color: {r: 0.70980394, g: 0.4313725, b: 0.56078434, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

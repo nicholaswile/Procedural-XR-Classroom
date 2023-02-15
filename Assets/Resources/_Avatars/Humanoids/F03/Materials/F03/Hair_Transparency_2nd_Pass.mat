@@ -21,7 +21,7 @@ Material:
   - _SURFACE_TYPE_TRANSPARENT
   - _TRANSPARENT_WRITES_MOTION_VEC
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
@@ -104,6 +104,7 @@ Material:
     - _SmoothnessPower: 1
     - _SpecularMix: 0.5
     - _SpecularMultiplier: 0.40586635
+    - _SpecularPower: 2
     - _SpecularPowerScale: 4
     - _SpecularShiftMax: -0.25
     - _SpecularShiftMin: -0.777
@@ -112,14 +113,14 @@ Material:
     - _VertexColorStrength: 0.802
     - __dirty: 1
     m_Colors:
-    - _DiffuseColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
+    - _DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
     - _EndColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HighlightAColor: {r: 0.68538064, g: 0.5785821, b: 0.43762976, a: 1}
+    - _HighlightAColor: {r: 0.68538064, g: 0.5785821, b: 0.43762973, a: 1}
     - _HighlightADistribution: {r: 0.57360005, g: 0.71370006, b: 0.91270006, a: 0}
     - _HighlightBColor: {r: 0.56062776, g: 0.52232945, b: 0.48891217, a: 1}
     - _HighlightBDistribution: {r: 0.0948, g: 0.36240003, b: 0.5561, a: 0}
     - _RootColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularTint: {r: 1, g: 1, b: 1, a: 0}
-    - _VertexBaseColor: {r: 0.2402475, g: 0.08494474, b: 0, a: 1}
+    - _VertexBaseColor: {r: 0.24024746, g: 0.0849447, b: 0, a: 1}
   m_BuildTextureStacks: []

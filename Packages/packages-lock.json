@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.soupday.cc3_unity_tools": {
-      "version": "file:C:/Users/nwile/Downloads/cc_unity_tools_3D-1.4.3/cc_unity_tools_3D-1.4.3",
+      "version": "file:C:/Users/nicho/Downloads/cc_unity_tools_3D-1.4.3/cc_unity_tools_3D-1.4.3",
       "depth": 0,
       "source": "local",
       "dependencies": {}

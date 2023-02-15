@@ -140,7 +140,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &95965892
 Transform:
@@ -270,7 +270,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &282230529
 MonoBehaviour:
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818fbd20253e1d8488340f236ea2b5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numAvatars: 50
+  numAvatars: 500
   avatars:
   - {fileID: 5847302644064464766, guid: 72546f3f48d55c5499542cf42361d8d6, type: 3}
   - {fileID: 6905980256970752972, guid: a8b54c69f49d45548b673abaac1539ff, type: 3}
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderValue: 1
   minValue: 1
-  maxValue: 5
+  maxValue: 50
   avatarLoader: {fileID: 282230529}
 --- !u!114 &282230531
 MonoBehaviour:
