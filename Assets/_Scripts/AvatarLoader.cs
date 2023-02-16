@@ -15,6 +15,8 @@ using UnityEngine;
 public class AvatarLoader : MonoBehaviour
 {
     public int numAvatars = 50;
+    public int numAvPerChunk = 25;
+
 
     [SerializeField] private List<GameObject> avatars;
     [SerializeField] private List<GameObject> avatarInstances;
@@ -25,6 +27,7 @@ public class AvatarLoader : MonoBehaviour
     private List<Transform> positions;
 
     private int totalAvatars;
+
 
     // Start is called before the first frame update
     void Start()
@@ -89,8 +92,13 @@ public class AvatarLoader : MonoBehaviour
         int nextCol = 7;*/
 
         int deskStep = 7;
-        int avXPos = 0;
-        int numAvPerChunk = 25;
+        int avXPos = -2;
+
+
+        int deskLength = 4;
+        int numAvatarPerDesk = 5;
+        int avatarXStep = deskLength / (numAvatarPerDesk - 1);
+        float avatarXPos = (0 - (numAvatarPerDesk - 1) * .5f * avatarXStep);
 
         foreach (GameObject avatar in avatarInstances)
         {
