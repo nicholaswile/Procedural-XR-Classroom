@@ -15,7 +15,7 @@ using UnityEngine;
 public class AvatarLoader : MonoBehaviour
 {
     public int numAvatars = 50;
-    public int numAvPerChunk = 25;
+    public int numAvatarsPerChunk = 25;
 
 
     [SerializeField] private List<GameObject> avatars;
@@ -72,59 +72,58 @@ public class AvatarLoader : MonoBehaviour
         }
     }
 
-    public void ActivateAvatars(int i)
+    public void ActivateAvatars(int numAvatarsToLoad)
     {
+        deskLoader.ActivateDesks(numAvatarsToLoad);
 
-        deskLoader.ActivateDesks(i);
+        int numAvatarsCurrentlyLoaded = 0;
 
-        int j = 0;
+        // Z position of avatar
+        int currentDeskRowNumber = 0;
+        int deskZStep = 3;
 
-        // Used for calculating position
-        int rowNumber = 0;
-        //int avPerRow = i / 3;
-        int avPerRow = 5;
-        //int rowStep = i/avPerRow;
-        int rowStep = 1;
-        int colNumber = 0;
-        int colStep = 3;
-
-        /*int maxRows = 5;
-        int nextCol = 7;*/
-
-        int deskStep = 7;
-        int avXPos = -2;
-
-
+        // X position of avatar
+        int numColumns = (int)Mathf.Ceil((float)numAvatarsToLoad / (float)numAvatarsPerChunk);
+        int deskXStep = 7;
         int deskLength = 4;
-        int numAvatarPerDesk = 5;
-        int avatarXStep = deskLength / (numAvatarPerDesk - 1);
-        float avatarXPos = (0 - (numAvatarPerDesk - 1) * .5f * avatarXStep);
+        int numAvatarsPerDesk = 5;
+        int avatarXStep = deskLength / (numAvatarsPerDesk - 1);
+        int changeInAvatarXPos = 0;
+        float intialAvatarXPos = (0 - (numColumns-1)*.5f*deskXStep-(numAvatarsPerDesk - 1) * .5f * avatarXStep);
+        float currentAvatarXPos;
 
         foreach (GameObject avatar in avatarInstances)
         {
-            avatar.transform.position = new Vector3(colNumber+avXPos, height, rowNumber);
+            currentAvatarXPos = intialAvatarXPos + changeInAvatarXPos;
 
-            if (j < i)
+            avatar.transform.position = new Vector3(currentAvatarXPos, height, currentDeskRowNumber);
+
+            if (numAvatarsCurrentlyLoaded < numAvatarsToLoad)
             {
                 avatar.SetActive(true);
             }
+
             else
             {
                 avatar.SetActive(false);
             }
-            j++;
 
-            // Used for calculating position
-            colNumber += rowStep;
-            if (j%avPerRow == 0)
+            numAvatarsCurrentlyLoaded++;
+
+            changeInAvatarXPos += avatarXStep;
+
+            // Start a new row after numAvatarsPerDesk is reached
+            if (numAvatarsCurrentlyLoaded%numAvatarsPerDesk == 0)
             {
-                rowNumber += colStep;
-                colNumber = 0;
+                currentDeskRowNumber += deskZStep;
+                changeInAvatarXPos = 0;
             }
-            if (j%numAvPerChunk == 0)
+
+            // Start a new column after numAvatarsPerChunk is reached
+            if (numAvatarsCurrentlyLoaded%numAvatarsPerChunk == 0)
             {
-                avXPos += deskStep;
-                rowNumber = 0;
+                intialAvatarXPos += deskXStep;
+                currentDeskRowNumber = 0;
             }
 
         }

@@ -28,7 +28,7 @@ public class DeskLoader : MonoBehaviour
             avatarLoader = GetComponent<AvatarLoader>();
         }
         numAvatars = (int)avatarLoader.numAvatars;
-        numAvatarsPerChunk = avatarLoader.numAvPerChunk;
+        numAvatarsPerChunk = avatarLoader.numAvatarsPerChunk;
         totalDesks = (int) Mathf.Ceil(numAvatars / 5);
      
         PoolDesks();
@@ -51,9 +51,7 @@ public class DeskLoader : MonoBehaviour
         int deskZPos = -1 + 3 * deskNum;
         int j = 0;
 
-        float deskXPos = 2;
         int deskXStep = 7;
-        deskXPos = 0;
 
         int deskPerCol = 5;
 
@@ -65,7 +63,7 @@ public class DeskLoader : MonoBehaviour
         // If three columns, desks spawn at X=-1 Distance, X=0 Distance, and X=1 Distance
         // And so on...
 
-        deskXPos = (0-(numCol-1)*.5f * deskXStep);
+        float deskXPos = (0-(numCol-1)*.5f * deskXStep);
 
         GameObject desk;
         for (int i = 0; i < numAvatars; i++)
