@@ -1,6 +1,7 @@
 // Nicholas Wile
 // Dr. Sungchul Jung
-// Jan 17, 2023
+// Created: Jan 17, 2023 - NW
+// Last Edited: Feb 22, 2023 - NW
 
 /// <summary>
 /// This class resizes the floor space. 
@@ -13,13 +14,14 @@ public class ResizeFloor : MonoBehaviour
     [SerializeField] private Transform floor;
 
     //[Range(1f, 5f)]
-    public float scale = 1;
+    //public float scale = 1;
 
     private float xValue, zValue;
-
     private Vector3 resize;
+    private float numColumns;
     
-    [SerializeField] private Interface ui;
+    //[SerializeField] private Interface ui;
+    [SerializeField] private AvatarLoader avatarLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -28,19 +30,27 @@ public class ResizeFloor : MonoBehaviour
         {
             floor = GetComponent<Transform>();
         }
-        if (ui == null)
+       /* if (ui == null)
         {
             ui = GetComponent<Interface>();
+        }*/
+        if (avatarLoader == null)
+        {
+            avatarLoader = GetComponent<AvatarLoader>();
         }
+
         xValue = floor.localScale.x;
         zValue = floor.localScale.z;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        scale = ui.sliderValue;
-        resize = new Vector3(xValue*scale, 1, zValue*scale);
+        //scale = ui.sliderValue;
+        numColumns = avatarLoader.numColumns;
+
+        resize = new Vector3(xValue*numColumns, 1, zValue*2);
         floor.localScale = resize;
     }
 }

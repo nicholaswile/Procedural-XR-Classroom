@@ -14,20 +14,23 @@ using UnityEngine;
 
 public class AvatarLoader : MonoBehaviour
 {
+    public int numColumns = 1;
     public int numAvatars = 50;
     public int numAvatarsPerChunk = 25;
-
+    public int deskZStep = 3;
+    public int deskXStep = 7;
+    public int initialAvatarZPos = 2;
 
     [SerializeField] private List<GameObject> avatars;
     [SerializeField] private List<GameObject> avatarInstances;
     [SerializeField] private float height = .83f;
     [SerializeField] private DeskLoader deskLoader;
 
-    // We will use this to place avatars in their desks eventually... 
-    private List<Transform> positions;
+    [SerializeField] private GameObject desk;
+    [SerializeField] private List<GameObject> deskInstances;
+
 
     private int totalAvatars;
-
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,7 @@ public class AvatarLoader : MonoBehaviour
         }
 
         PoolAvatars();
+
     }
 
     private void PoolAvatars()
@@ -46,7 +50,7 @@ public class AvatarLoader : MonoBehaviour
         System.Random rnd = new System.Random();
         totalAvatars = avatars.Count;
         GameObject temp;
-        int target, previous=-1;
+        int target, previous = -1;
 
         for (int i = 0; i < numAvatars; i++)
         {
@@ -64,9 +68,9 @@ public class AvatarLoader : MonoBehaviour
             //temp.GetComponent<Renderer>().material.color = new Vector4(rnd.Next(0, 2), rnd.Next(0, 2), rnd.Next(0, 2), 1);
             
             //faces avatar in correct direction
-            // (because for some reason cc/ic exports them facing backwards)
+            // (because for some reason cc/ic exports models facing backwards)
             temp.transform.Rotate(0, 180, 0);
-
+            
             temp.SetActive(false);
             avatarInstances.Add(temp);
         }
@@ -74,17 +78,14 @@ public class AvatarLoader : MonoBehaviour
 
     public void ActivateAvatars(int numAvatarsToLoad)
     {
-        deskLoader.ActivateDesks(numAvatarsToLoad);
-
         int numAvatarsCurrentlyLoaded = 0;
 
         // Z position of avatar
         int currentDeskRowNumber = 0;
-        int deskZStep = 3;
 
         // X position of avatar
-        int numColumns = (int)Mathf.Ceil((float)numAvatarsToLoad / (float)numAvatarsPerChunk);
-        int deskXStep = 7;
+        numColumns = (int)Mathf.Ceil((float)numAvatarsToLoad / (float)numAvatarsPerChunk);
+
         int deskLength = 4;
         int numAvatarsPerDesk = 5;
         int avatarXStep = deskLength / (numAvatarsPerDesk - 1);
@@ -92,11 +93,13 @@ public class AvatarLoader : MonoBehaviour
         float intialAvatarXPos = (0 - (numColumns-1)*.5f*deskXStep-(numAvatarsPerDesk - 1) * .5f * avatarXStep);
         float currentAvatarXPos;
 
+        deskLoader.ActivateDesks(numAvatarsToLoad);
+
         foreach (GameObject avatar in avatarInstances)
         {
             currentAvatarXPos = intialAvatarXPos + changeInAvatarXPos;
 
-            avatar.transform.position = new Vector3(currentAvatarXPos, height, currentDeskRowNumber);
+            avatar.transform.position = new Vector3(currentAvatarXPos, height, initialAvatarZPos + currentDeskRowNumber);
 
             if (numAvatarsCurrentlyLoaded < numAvatarsToLoad)
             {

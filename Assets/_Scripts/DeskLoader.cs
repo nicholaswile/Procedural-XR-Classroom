@@ -1,6 +1,7 @@
 // Nicholas Wile
 // Dr. Sungchul Jung
-// Feb 13, 2023
+// Created: Feb 13, 2023 - NW
+// Last Edited: Feb 22, 2023 - NW
 
 /// <summary>
 /// This class loads the desks into the scene; it depends on the num of avatars. 
@@ -47,15 +48,14 @@ public class DeskLoader : MonoBehaviour
 
     public void ActivateDesks(int activeAvatars)
     {
+        int deskZStep = avatarLoader.deskZStep;
+        int deskXStep = avatarLoader.deskXStep;
+        int numCol = avatarLoader.numColumns;
+        int initialDeskZPos = avatarLoader.initialAvatarZPos - 1;
+
         int deskNum = 0;
-        int deskZPos = -1 + 3 * deskNum;
-        int j = 0;
-
-        int deskXStep = 7;
-
+        int currentDeskRowNumber = 0;
         int deskPerCol = 5;
-
-        int numCol = (int) Mathf.Ceil((float)activeAvatars / (float)numAvatarsPerChunk);
 
         // Formula: Player Position - 1/2 (DistanceBtwnDesks) * (NumberAdditionalColumns)
         // If only one column, desks spawn in same X position as player
@@ -63,9 +63,12 @@ public class DeskLoader : MonoBehaviour
         // If three columns, desks spawn at X=-1 Distance, X=0 Distance, and X=1 Distance
         // And so on...
 
-        float deskXPos = (0-(numCol-1)*.5f * deskXStep);
+
+        int deskZPos = initialDeskZPos + deskZStep * deskNum;
+        float deskXPos = (0 - (numCol - 1) * .5f * deskXStep);
 
         GameObject desk;
+
         for (int i = 0; i < numAvatars; i++)
         {
 
@@ -76,6 +79,7 @@ public class DeskLoader : MonoBehaviour
           
             desk = deskInstances[deskNum];
             desk.transform.position = new Vector3(deskXPos, 1, deskZPos);
+
             if (i >= activeAvatars)
             {
                 desk.SetActive(false);
@@ -86,17 +90,17 @@ public class DeskLoader : MonoBehaviour
             }
             
             deskNum++;
-            j++;
+            currentDeskRowNumber++;
             
             if (deskNum % deskPerCol == 0)
             { 
                 deskXPos += deskXStep;
                
-                j = 0;
+                currentDeskRowNumber = 0;
                 
             }
 
-            deskZPos = -1 + 3 * j;
+            deskZPos = initialDeskZPos + deskZStep * currentDeskRowNumber;
 
         }
     }
