@@ -1,6 +1,7 @@
 // Nicholas Wile
 // Dr. Sungchul Jung
-// Jan 17, 2023
+// Created: Jan 17, 2023 - NW
+// Last Edited: Feb 22, 2023 - NW
 
 /// <summary>
 /// This class loads the avatars into the scene. 
@@ -19,7 +20,7 @@ public class AvatarLoader : MonoBehaviour
     public int numAvatarsPerChunk = 25;
     public int deskZStep = 3;
     public int deskXStep = 7;
-    public int initialAvatarZPos = 2;
+    public int initialAvatarZPos = 6;
 
     [SerializeField] private List<GameObject> avatars;
     [SerializeField] private List<GameObject> avatarInstances;
