@@ -4,8 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/VRClassroom.unity
+    guid: c8a1af748ae733440ad09e700faea36c
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 535e05ffdc218a94fac1932b33b83943, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b0f5b2d52ac407845815be5c37e32e37, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: d45fb40d0b11e02478fd5cf7622eccaa, type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 4301fb5bf0622ae4883014a04a6f29af, type: 2}
